@@ -1,20 +1,24 @@
 # Brain Tumor Detection Project
 
 A machine learning project detecting brain tumors from medical images.  
-Built with **Python 3.12**, structured for readability, maintainability, and easy extension to an API.
+Built with **Python 3.12** and , structured for readability, maintainability, easy extension to an API, and Dockerized.
+
+Simple wrapper around Ultralytics YOLO to detect brain tumors in MRI images.
+Returns bounding boxes grouped by class.
 
 ---
 
 ## Project Structure
 
-├── notebooks/ # Jupyter notebooks for exploration, experiments (primary content)
-├── src/ # Core application code (processing, inference, etc.)
-├── models/ # (Ignored) Trained model files and weights
-├── .gitignore # Git exclude for models and other artifacts
-├── .python-version # Python version specified (3.12)
-├── pyproject.toml # Project metadata and dependency declarations
-├── uv.lock # Locked dependencies for reproducible environments
-└── README.md # Project documentation you're reading now
+notebooks/       → Exploration & experiments  
+src/             → Core logic (processing, inference)  
+models/          → (Ignored) Trained model files  
+.gitignore       → Ignore models & artifacts  
+.python-version  → Python 3.12  
+pyproject.toml   → Metadata & dependencies  
+uv.lock          → Locked deps for reproducibility  
+README.md        → You’re here
+
 
 
 ---
