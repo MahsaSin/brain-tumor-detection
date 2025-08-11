@@ -1,0 +1,15 @@
+[project]
+name = "brain-tumor-detection"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "ipykernel>=6.30.0",
+    "mlflow>=3.2.0",
+    "omegaconf>=2.3.0",
+    "pillow>=11.3.0",
+    "ultralytics>=8.3.172",
+    "uvicorn>=0.35.0",
+]
