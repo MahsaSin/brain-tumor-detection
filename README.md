@@ -41,3 +41,22 @@ This project aims to detect the presence of brain tumors in medical imaging data
 ```bash
 git clone https://github.com/MahsaSin/brain-tumor-detection.git
 cd brain-tumor-detection
+
+
+## Running with Docker
+
+The project includes a `Dockerfile` based on Python 3.12 slim, pre-configured with dependencies like `ffmpeg` and `uv`.
+
+**Build the Docker image:**
+```bash
+docker build -t my-inference-app .
+
+
+**Run the container:**
+```bash
+docker run -p 8000:8000 my-inference-app
+
+**Once running, the API will be accessible at:**
+```bash
+http://localhost:8000
+
