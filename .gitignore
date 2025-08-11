@@ -16,3 +16,4 @@ wheels/
 /mlruns/
 /mlartifacts/
 /runs/
+/models/
