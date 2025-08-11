@@ -1,0 +1,5 @@
+experiment_name: brain-tumor-detection
+model_path: models/tumor_detection_model.pt
+data_path: data/data.yaml
+epochs: 100
+imgsz: 240
