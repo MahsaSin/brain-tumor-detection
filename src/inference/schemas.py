@@ -10,5 +10,4 @@ class Result(BaseModel):
 
 
 class InputData(BaseModel):
-    img_path: str
-    
+    img_path: str 
