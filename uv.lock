@@ -88,6 +88,7 @@ dependencies = [
     { name = "mlflow" },
     { name = "omegaconf" },
     { name = "pillow" },
+    { name = "pydantic" },
     { name = "ultralytics" },
     { name = "uvicorn" },
 ]
@@ -99,6 +100,7 @@ requires-dist = [
     { name = "mlflow", specifier = ">=3.2.0" },
     { name = "omegaconf", specifier = ">=2.3.0" },
     { name = "pillow", specifier = ">=11.3.0" },
+    { name = "pydantic", specifier = ">=2.11.7" },
     { name = "ultralytics", specifier = ">=8.3.172" },
     { name = "uvicorn", specifier = ">=0.35.0" },
 ]
