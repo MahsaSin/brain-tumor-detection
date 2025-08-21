@@ -49,7 +49,7 @@ The project includes a `Dockerfile` based on Python 3.12 slim, pre-configured wi
 
 **Build the Docker image:**
 ```bash
-docker build -t my-inference-app .
+docker build -t my-inference-app . -f .\src\inference\Dockerfile
 ```
 
 **Run the container:**
