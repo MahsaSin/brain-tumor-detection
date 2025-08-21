@@ -12,6 +12,8 @@ RUN uv sync
 
 COPY src/inference/ ./inference/
 COPY models/ ./models/
+COPY sample-imgs/ ./sample-imgs/
+
 
 ENV PYTHONPATH=.
 

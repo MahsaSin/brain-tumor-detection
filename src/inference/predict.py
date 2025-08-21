@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 
 from inference.conf import MODEL_PATH
+from inference.schemas import Detection
 
 
 class Predictor:
@@ -12,14 +13,20 @@ class Predictor:
         boxes = results[0].boxes
         class_names = self.model.names
 
-        class_boxes = {}
+        detections = []
         for box in boxes:
             cls_id = int(box.cls[0])
             cls_name = class_names[cls_id]
-            xywh = box.xywh[0].tolist()
-            class_boxes.setdefault(cls_name, []).append(xywh)
+            xyxy = box.xyxy[0].tolist()
 
-        return class_boxes
+            det = Detection(
+                class_name=cls_name,
+                confidence=float(box.conf[0]),
+                bbox=xyxy
+            )
+            detections.append(det)
+
+        return detections
 
 
 if __name__ == "__main__":

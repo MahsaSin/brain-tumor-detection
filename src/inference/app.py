@@ -1,18 +1,22 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
 
 from inference.predict import Predictor
+from inference.schemas import Result, InputData
 
 app = FastAPI()
 pred = Predictor()
 
 
 @app.post("/predict")
-async def predict(img_path):
+async def predict(input_data: InputData):
     try:
-        class_boxes = pred.predict(img_path=img_path)
+        detections = pred.predict(input_data.img_path)
 
-        return JSONResponse({"predictions": class_boxes})
+        result = Result(
+            predictions=detections
+        )
+
+        return  result
 
     except Exception as e:
         raise HTTPException(
