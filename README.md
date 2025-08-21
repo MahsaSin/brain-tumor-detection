@@ -59,6 +59,6 @@ docker run -p 8000:8000 my-inference-app
 
 **Once running, the API will be accessible at:**
 ```bash
-http://localhost:
+http://localhost:8000
 ```
 
