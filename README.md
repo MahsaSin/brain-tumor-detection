@@ -61,4 +61,10 @@ docker run -p 8000:8000 my-inference-app
 ```bash
 http://localhost:8000
 ```
-
+## Train
+```bash
+uv run mlflow server --host 127.0.0.1 --port 8080
+set MLFLOW_TRACKING_URI=http://127.0.0.1:8080
+cd src/
+uv run python train/train_model.py
+```
